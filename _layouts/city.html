@@ -58,12 +58,11 @@ layout: default
             {% assign all_images = site.static_files | where_exp: "file", "file.path contains 'assets/img/'" | sample: 12 %}
             {% for profile in random_profiles %}
             <div class="call-girl-sevice-item">
-              <a href="#{{page.title|downcase}}-call-girl">
+              <a href="#escorts-service-{{page.title|downcase}}-call-girl">
                 <div class="row">
                   <div class="col-lg-2 col-md-3 col-4">
                     <div class="call-girl-sevice-img">
-                      <img class="lazyload" src="{{all_images[forloop.index0].path}}"
-                        alt="aalya only genuine people text indian escorts">
+                      <img class="lazyload" src="{{all_images[forloop.index0].path}}" alt="{{all_images[forloop.index0].name|replace:'-',' '| split: '.' | first}}">
                     </div>
                   </div>
                   <div class="col-lg-10 col-md-9 col-8">
