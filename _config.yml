@@ -1,0 +1,29 @@
+title: Ahmedabad Call Girl Cash Payment & Perfect Escorts Service with Massage
+post_title: Sex with %%% Call Girl | Escorts Girls Service in %%%
+desc: Here are Ultimate Profiles Girls with independent escorts girl and Very Hot Women is provided by zoyapatel.com so you without stress call me.
+permalink: /:title
+tel: 8282811221
+email: contact@ashviarora.com
+url: https://ashviarora.com
+
+timezone: Asia/Kolkata
+
+collections:
+  pages:
+    output: true
+    permalink: /:title
+  city:
+    output: true
+    permalink: /call-girl-:name
+  profiles:
+    output: false
+
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: page
+  - scope:
+      type: city
+    values:
+      layout: city

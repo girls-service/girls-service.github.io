@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+  <main role="main">
+    <section class="Service-warpper">
+      <div class="container">
+        <div class="services-sec">
+          <div class="course-details-banner-content zu-breadcrumb ">
+            <div class="b-services">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__crumb breadcrumbs__crumb--home">
+                  <a href="/">
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="breadcrumbs__crumb crumb--last">
+                  <a href="#{{page.title|downcase}}-call-girl">
+                    <span>{{page.title}} Call Girl</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="search-form-sec" id="jdfo">
+              <select class="custom-select" id="fiwu">
+                <option selected="selected" value="">Select City</option>
+                {% if '/'!=page.url %}<option value="/">Mumbai Call Girl</option>{% endif %}
+                {% for city in site.city %}
+                {% if city.url!=page.url %}
+                <option value="{{city.url}}">{{city.title}} Call Girl</option>
+                {% endif %}
+                {% endfor %}
+              </select>
+
+              <button class="btn-search service-btn" type="submit">
+                <img src="/assets/icon/search.svg" alt="search">
+                <span>Search </span>
+              </button>
+            </form>
+
+
+            <div class="sub-heading">
+              <div class="sub-heading-title">
+                <h1 class='title-h1'>{{site.post_title|replace:'%%%',page.title}}</h1>
+                {% if content.size > 10 %}
+                {{content | split: '%%%%%' | first | strip}}
+                {% else %}
+                
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+
+          <div class="call-girl-sevice-list-sec">
+            {% assign random_profiles = site.profiles | sample: 12 %}
+            {% assign all_images = site.static_files | where_exp: "file", "file.path contains 'assets/img/'" | sample: 12 %}
+            {% for profile in random_profiles %}
+            <div class="call-girl-sevice-item">
+              <a href="#{{page.title|downcase}}-call-girl">
+                <div class="row">
+                  <div class="col-lg-2 col-md-3 col-4">
+                    <div class="call-girl-sevice-img">
+                      <img class="lazyload" src="{{all_images[forloop.index0].path}}"
+                        alt="aalya only genuine people text indian escorts">
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-9 col-8">
+                    <div class="call-girl-sevice-heading">
+                      <div class="course-details-meta">
+                        <div class="meta-name">
+                          <h3 class="title">{{profile.title}} - {{profile.profile_title|replace:'%%%',page.title}}</h3>
+                          <p>{{profile.content|strip_html|strip_newline|replace:'%%%',page.title}}</p>
+                        </div>
+                      </div>
+                      <div class="services-list-sec ">
+                        <ul>
+                          <li>{{"19,20,21,22,23,24,25,26" | split: ","| sample}} Years</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="call-whatsapp">
+                <a class="service-btn call" href="{{profile.call_link|replace:'%%%',page.title|downcase}}">
+                  <img src="/assets/icon/call.svg" alt="call">
+                </a>
+                <a class="service-btn whatsup-btn-stick wapp"
+                  href="{{profile.whatsapp_link|replace:'%%%',page.title|downcase}}" target="_blank">
+                  <img src="/assets/icon/whatsapp-white.svg">
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top-cities">
+      <div class="container">
+        <div class="course-details-banner-content zu-breadcrumb  rs-banner">
+          <div class="course-details-meta services-list-sec">
+            <div class="content-name">
+
+              {{content|split: '%%%%%'|last|strip}}
+
+            </div>
+          </div>
+        </div>
+
+        {% if page.local.size > 0 and false%}
+        <div class="services-list-sec">
+          <h2>{{page.title}} Top Localities</h2>
+          <ul>
+            
+            {% for local in page.local %}
+            <li>
+              <a href="#{{local|downcase|replace:' ','-'}}-call-girls-and-escorts-service">{{local}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        
+        {% if site.city.size > 0 %}
+        <div class="services-list-sec">
+          <h2>Find us in other top cities of India</h2>
+          <ul>
+            {% if '/'!=page.url %}
+            <li>
+              <a href="/">MUMBAI</a>
+            </li>
+            {% endif %}
+
+            {% for city in site.city %}
+            {% if city.url!=page.url %}
+            <li>
+              <a href="{{city.url}}">{{city.title|upcase}}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        
+      </div>
+    </section>
+
+
+    <div id="cwbt">
+      <a class="call" href="#{{page.title|downcase}}-escorts-service">CALL NOW</a>
+      <a class="wapp"  href="#{{page.title|downcase}}-call girls-service">WHATSAPP</a>
+    </div>
+
+
+  </main>

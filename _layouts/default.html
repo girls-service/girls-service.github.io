@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-in">
+
+
+{%- capture my_variable %}{% if content.size > 10 %}{{content | strip_html | truncatewords: 30, ""}}{% else %}Hy I provide a top escorts girl with all figure size with a milky good color {{page.title|downcase}} escort service every man wishes well educated, decent bed all day and night, call girls {{page.title|downcase}}{% endif %}{% endcapture %}
+
+{%- capture title %}{% if page.url=='/' %}{{site.post_title|replace:'%%%',page.title}}{% else %}{{page.title}}{% endif %}{% endcapture %}
+
+<head>
+  <title>{{title}}</title>
+  <meta name="description" content="{{ my_variable }}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta charset="utf-8">
+  <meta name="content-language" content="en-in">
+  <meta name="language" content="en-in">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <link rel="canonical" href="{{page.url|absolute_url}}" />
+  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+
+<body ng-app="myApp">
+  <header class="header-warpper">
+    <div class="menu-respo">
+      <div class="container">
+        <div class="header-sec">
+          <div class="logo">
+            <a href="{{page.url}}" style="font-size:25px;font-weight:bold;">{{page.title}}</a>
+          </div>
+          <div class="menu-sec">
+            <a class="tham-but" href="/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  {{content}}
+  <footer class="footer-wrapper border-top ">
+    <div class="container">
+      <div class="footer-sec">
+        <ul>
+          <li>
+            <a href="/contact">
+              CONTACT
+            </a>
+          </li>
+          <li>
+            <a href="/disclaimer">
+              DISCLAIMER
+            </a>
+          </li>
+          <li>
+            <a href="/privacy-policy">
+              PRIVACY POLICY
+            </a>
+          </li>
+          <li>
+            <a href="/terms-and-conditions">
+              TERMS & CONDITIONS
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-sec ">
+      <p class="mb-0">Copyright © 2025 Ashvi</p>
+    </div>
+  </footer>
+  <script id="scrt" src="/assets/script.js" data-title="{{page.title|downcase}}"></script>
+</body>
+
+
+{%-if jekyll.environment == "production"%}
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+{%-endif%}
+</html>

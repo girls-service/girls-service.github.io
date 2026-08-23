@@ -1,0 +1,22 @@
+---
+sitemap: false
+layout: none
+---
+
+{%- assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404"' %}
+{%- for page in pages %}
+  {{site.siteurl}}{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}<br>
+{%- endfor %}
+
+{%- assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+{%- for collection in collections %}
+  {%- assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}
+  {%- for doc in docs %} 
+    {{site.siteurl}}{{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }}<br>
+  {%- endfor %} 
+{%- endfor %}
+  
+{%- assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' %}
+{%- for file in static_files %}
+  {{site.siteurl}}{{ file.path | replace:'/index.html','/' | absolute_url | xml_escape }}<br>
+{%- endfor %}
