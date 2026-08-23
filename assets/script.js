@@ -24,7 +24,7 @@ let no
       a.href='tel:+91'+no[scrt.dataset.title]
   });
   document.querySelectorAll('.wapp').forEach(a=>{
-      a.href=`https://wa.me/+91${no[scrt.dataset.title]}?text=Hello,+I+saw+your+profile+in+${scrt.dataset.title}+(ashviarora.com).`
+      a.href=`https://wa.me/+91${no[scrt.dataset.title]}?text=Hello,+I+saw+your+profile+in+${scrt.dataset.title}+(${location.host}).`
   });
 })();
 
