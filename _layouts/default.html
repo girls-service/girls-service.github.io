@@ -4,7 +4,7 @@
 
 {%- capture my_variable %}{% if content.size > 10 %}{{page.content | strip_html | truncatewords: 30, ""}}{% else %}Hy I provide a top escorts girl with all figure size with a milky good color {{page.title|downcase}} escort service every man wishes well educated, decent bed all day and night, call girls {{page.title|downcase}}{% endif %}{% endcapture %}
 
-{%- capture title %}{% if page.url=='/' %}{{site.post_title|replace:'%%%',page.title}}{% else %}{{page.title}}{% endif %}{% endcapture %}
+{%- capture title %}{% if page.url=='/' or page.collection=='city'%}{{site.post_title|replace:'%%%',page.title}}{% else %}{{page.title}}{% endif %}{% endcapture %}
 
 <head>
   <title>{{title}}</title>
