@@ -2,7 +2,7 @@
 layout: default
 ---
 
-  <main role="main">
+  <main>
     <section class="Service-warpper">
       <div class="container">
         <div class="services-sec">
@@ -44,7 +44,7 @@ layout: default
               <div class="sub-heading-title">
                 <h1 class='title-h1'>{{site.post_title|replace:'%%%',page.title}}</h1>
                 {% if content.size > 10 %}
-                {{content | split: '%%%%%' | first | strip}}
+                {{content | split: '<p>%%%%%</p>' | first | strip}}
                 {% else %}
                 
                 {% endif %}
@@ -69,7 +69,7 @@ layout: default
                     <div class="call-girl-sevice-heading">
                       <div class="course-details-meta">
                         <div class="meta-name">
-                          <h3 class="title">{{profile.title}} - {{profile.profile_title|replace:'%%%',page.title}}</h3>
+                          <h2 class="title">{{profile.title}} - {{profile.profile_title|replace:'%%%',page.title}}</h2>
                           <p>{{profile.content|strip_html|strip_newline|replace:'%%%',page.title}}</p>
                         </div>
                       </div>
@@ -88,7 +88,7 @@ layout: default
                 </a>
                 <a class="service-btn whatsup-btn-stick wapp"
                   href="{{profile.whatsapp_link|replace:'%%%',page.title|downcase}}" target="_blank">
-                  <img src="/assets/icon/whatsapp-white.svg">
+                  <img src="/assets/icon/whatsapp-white.svg" alt="whatsapp">
                 </a>
               </div>
             </div>
@@ -103,7 +103,7 @@ layout: default
           <div class="course-details-meta services-list-sec">
             <div class="content-name">
 
-              {{content|split: '%%%%%'|last|strip}}
+              {{content|split: '<p>%%%%%</p>'|last|strip}}
 
             </div>
           </div>
@@ -150,7 +150,7 @@ layout: default
 
     <div id="cwbt">
       <a class="call" href="#{{page.title|downcase}}-escorts-service">CALL NOW</a>
-      <a class="wapp"  href="#{{page.title|downcase}}-call girls-service">WHATSAPP</a>
+      <a class="wapp"  href="#{{page.title|downcase}}-call-girls-service">WHATSAPP</a>
     </div>
 
 
